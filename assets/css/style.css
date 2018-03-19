@@ -6,11 +6,11 @@
   } */
 
  #crystal-div {
-      background-color: white;
+      background-color: grey;
       width: 450px;
   }
 
-  .crystal {
+  .crystal-image {
     width: 80px;
     height: 80px;
     padding: 10px;
