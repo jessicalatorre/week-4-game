@@ -36,92 +36,95 @@ $(document).ready(() => {
       console.log(green);
   var red = Math.floor(Math.random () *(13 - 1)) + 1;
       console.log(red);
-   var yellow = Math.floor(Math.random () * (13 -1)) + 1;
+  var yellow = Math.floor(Math.random () * (13 - 1)) + 1;
       console.log(yellow);
 
-  function reset () {
+  function reset(){
+    console.log("reset");
   playerCounter = 0; //reset player counter back to 0
   randomNumber = Math.floor(Math.random() * (121 - 19)) + 19; //reset computer to randomly generate number
   //need to reset all four crystal values to randomly generate new number
  blue = Math.floor(Math.random() * (13-1)) +1; 
  green = Math.floor(Math.random() * (13 - 1)) + 1;
-  red = Math.floor(Math.random () *(13 - 1)) + 1;
+ red = Math.floor(Math.random () * (13 - 1)) + 1; 
  yellow = Math.floor(Math.random () * (13 -1)) + 1;
   }
 
   // four onclick events for each crystal using jQuery
   $("#blue").on('click', function () {
-  playerCounter++; 
+  playerCounter = playerCounter + blue;
   // console.log(playerCounter); //You'll see the player number in console 
   $('#player-score').text(playerCounter); // at this point, each time blue crystal is clicked, the player score increases
 
   //Added conditional statements for winning and losing; will repeat for green, red, and yellow crystals
-      if (playerCounter === randomNumber) {
-        playerCounter = playerCounter + Blue;
+
+    if (playerCounter === randomNumber) {
+        wins++;
         $('#wins').text("Wins: " + wins);
         alert("Yessss! You Won!");
-        reset ();
+        reset();
       }
       else if(playerCounter > randomNumber) {
         losses++;
         $('#losses').text("Losses: " + losses);
         alert("Be Brave! Try Again!");
-        reset ();
+        reset();
       }
     })
  $("#green").on('click', function () {
-  playerCounter++; 
+  playerCounter = playerCounter + green; //tried updating counter for each onclick event, so random number would be generated.
   console.log(playerCounter); //You'll see the player number in console 
   $('#player-score').text(playerCounter); // at this point, each time blue crystal is clicked, the player score increases
 
   //Add conditional statements for winning and losing
       if (playerCounter === randomNumber) {
-        playerCounter = playerCounter + Blue;
+        wins++;
         $('#wins').text("Wins: " + wins);
         alert("Yessss! You Won!");
-        reset ();
+        reset();
       }
       else if(playerCounter > randomNumber) {
         losses++;
         $('#losses').text("Losses: " + losses);
         alert("Be Brave! Try Again!");
-        reset ();
+        reset();
       }
     })
   $("#red").on('click', function () {
-  playerCounter++; 
+  playerCounter = playerCounter + red;
   console.log(playerCounter); //You'll see the player number in console 
   $('#player-score').text(playerCounter); // at this point, each time blue crystal is clicked, the player score increases
         
       if (playerCounter === randomNumber) {
-      playerCounter = playerCounter + Blue;
+      wins++;
       $('#wins').text("Wins: " + wins);
       alert("Yessss! You Won!");
-      reset ();
+      reset();
       }
       else if(playerCounter > randomNumber) {
       losses++;
       $('#losses').text("Losses: " + losses);
       alert("Be Brave! Try Again!"); 
-      reset ();
+      reset();
       }
     })
   $("#yellow").on('click', function () {
-  playerCounter++; 
+  playerCounter = playerCounter + yellow;
   console.log(playerCounter); //You'll see the player number in console 
   $('#player-score').text(playerCounter); // at this point, each time blue crystal is clicked, the player score increases
 
+
           if (playerCounter === randomNumber) {
-            playerCounter = playerCounter + Blue;
+            wins++;
             $('#wins').text("Wins: " + wins);
             alert("Yessss! You Won!");
-            reset ();
+            reset();
           }
           else if(playerCounter > randomNumber) {
             losses++;
             $('#losses').text("Losses: " + losses);
             alert("Be Brave! Try Again!");
-            reset ();
+            reset();
           }
         })
       })
