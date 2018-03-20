@@ -10,7 +10,7 @@
       width: 450px;
   }
 
-  .crystal-image {
+  #blue,#red,#green,#yellow {
     width: 80px;
     height: 80px;
     padding: 10px;

@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>simple crystal game</title>
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <link rel"stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel"stylesheet" type="text/css" href="css/reset.css">
 </head>
 <body>
 <h1>Crystals Collector!</h1>
@@ -20,27 +20,24 @@
     <p>Each time when the game starts, the game will change the value of each crystal</p>
 </div>
 
-<!-- <img src ="http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg" class="crystal" id="blue" alt "Blue Crystal"> -->
-
   <div id="crystal-div"> 
-      <!-- the elements below are images are dynamically created in my game.js file, so no need to include them in the html -->
-      <!-- <img src ="" id="blue" alt "Blue Crystal">
-      <img src ="" id="green" alt "Green Crystal">
-      <img src ="" id="red" alt "Red Crystal">
-      <img src ="" id="yellow" alt "Yellow Crystal"> -->
+      <img src ="images/bluegem.png" id="blue" alt "Blue Crystal">
+      <img src ="images/green.jpg" id="green" alt "Green Crystal">
+      <img src ="images/redgem.jpg" id="red" alt "Red Crystal">
+      <img src ="images/yellowgem.jpg" id="yellow" alt "Yellow Crystal">
   </div>
 
   <h2>Number to Match: <span id="number-to-match"></span></h2> 
   <!-- One use of span: can use span tag when formatting a few words within one larger p tag  -->
 
   <h2>Player Score: <span id="player-score"></span></h2>
-  <h3 id="numberWins">Wins: </h3>
-  <h3 id="numberLosses">Losses: </h3>
+  <h3 id="wins">Wins: </h3>
+  <h3 id="losses">Losses: </h3>
 
 
   <script type="text/javascript" 
   src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- <script src="assets/javascript/game.js"></script>
+ <script src="javascript/game.js"></script>
 
 </body>
 </html>
