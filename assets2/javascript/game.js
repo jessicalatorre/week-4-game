@@ -18,10 +18,10 @@ $(document).ready(() => {
   var wins =0;
   var losses =0;
 
-  var blue;
-  var red;
-  var green;
-  var yellow;
+  // var blue;
+  // var red;
+  // var green;
+  // var yellow;
   
   //declared variable to store value after computer randomly generated number betweeen 20-120(randomNumber)
   var randomNumber = Math.floor(Math.random() * (121 - 19)) + 19; //highest number goes first
@@ -30,23 +30,23 @@ $(document).ready(() => {
   $('#number-to-match').text(randomNumber);
 
     //below I'm declaring variables for cystals to store value when random number btwn 1-12 is created  
-    var blue = Math.floor(Math.random() * (13 - 1)) + 1;
+  var blue = Math.floor(Math.random() * (13 - 1)) + 1;
       console.log(blue);
-    var green = Math.floor(Math.random() * (13 - 1)) + 1;
+  var green = Math.floor(Math.random() * (13 - 1)) + 1;
       console.log(green);
-    var red = Math.floor(Math.random () *(13 - 1)) + 1;
+  var red = Math.floor(Math.random () *(13 - 1)) + 1;
       console.log(red);
-    var yellow = Math.floor(Math.random () * (13 -1)) + 1;
+   var yellow = Math.floor(Math.random () * (13 -1)) + 1;
       console.log(yellow);
 
   function reset () {
   playerCounter = 0; //reset player counter back to 0
   randomNumber = Math.floor(Math.random() * (121 - 19)) + 19; //reset computer to randomly generate number
   //need to reset all four crystal values to randomly generate new number
-  var blue = Math.floor(Math.random() * (13-1)) +1; 
-  var green = Math.floor(Math.random() * (13 - 1)) + 1;
-  var red = Math.floor(Math.random () *(13 - 1)) + 1;
-  var yellow = Math.floor(Math.random () * (13 -1)) + 1;
+ blue = Math.floor(Math.random() * (13-1)) +1; 
+ green = Math.floor(Math.random() * (13 - 1)) + 1;
+  red = Math.floor(Math.random () *(13 - 1)) + 1;
+ yellow = Math.floor(Math.random () * (13 -1)) + 1;
   }
 
   // four onclick events for each crystal using jQuery
@@ -57,7 +57,7 @@ $(document).ready(() => {
 
   //Added conditional statements for winning and losing; will repeat for green, red, and yellow crystals
       if (playerCounter === randomNumber) {
-        wins++;
+        playerCounter = playerCounter + Blue;
         $('#wins').text("Wins: " + wins);
         alert("Yessss! You Won!");
         reset ();
@@ -76,7 +76,7 @@ $(document).ready(() => {
 
   //Add conditional statements for winning and losing
       if (playerCounter === randomNumber) {
-        wins++;
+        playerCounter = playerCounter + Blue;
         $('#wins').text("Wins: " + wins);
         alert("Yessss! You Won!");
         reset ();
@@ -94,7 +94,7 @@ $(document).ready(() => {
   $('#player-score').text(playerCounter); // at this point, each time blue crystal is clicked, the player score increases
         
       if (playerCounter === randomNumber) {
-      wins++;
+      playerCounter = playerCounter + Blue;
       $('#wins').text("Wins: " + wins);
       alert("Yessss! You Won!");
       reset ();
@@ -112,7 +112,7 @@ $(document).ready(() => {
   $('#player-score').text(playerCounter); // at this point, each time blue crystal is clicked, the player score increases
 
           if (playerCounter === randomNumber) {
-            wins++;
+            playerCounter = playerCounter + Blue;
             $('#wins').text("Wins: " + wins);
             alert("Yessss! You Won!");
             reset ();
