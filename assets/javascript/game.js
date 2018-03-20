@@ -74,13 +74,24 @@ var crystalNumber = function() {
 
                 // All of the same game win-lose logic applies. So the rest remains unchanged.
 
+                //reset function
+                var reset = function () {
+                randomNumber = Math.floor(Math.random() * (121 - 19)) + 19;
+                playerCounter = 0; //reset player counter back to 0
+                imageCrystal = Math.floor(Math.random() * (13 - 1)) + 1; //need to reset all four crystal values to randomly generate new number
+                }
+
                 if (playerCounter === computerNumber) {
                   wins++;
                   $('#numberWins').text("Wins: " + wins);
+                  alert("Yessss! You Won!"); //this alert appears 4 times because its' in my for loop function
+                  reset ();
                 }
                 else if (playerCounter >= computerNumber) {
                   losses++;
                   $('#numberLosses').text("Losses: " + losses);
+                  alert("You lost. Try again!");
+                  reset ();
                 }
 
                 // alert("New score: " + playerCounter);
