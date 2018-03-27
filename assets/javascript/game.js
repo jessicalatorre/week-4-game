@@ -44,7 +44,7 @@ $(document).ready(() => {
   console.log("reset");
   playerCounter = 0; //reset player counter back to 0
   randomNumber = Math.floor(Math.random() * (121 - 19)) + 19; //reset computer to randomly generate number
-  // $('#number-to-match').text(randomNumber);
+  $('#number-to-match').text(randomNumber); //
   console.log('new random: ' + randomNumber)
   //need to reset all four crystal values to randomly generate new number
  blue = Math.floor(Math.random() * (13-1)) +1; 
@@ -84,13 +84,13 @@ $(document).ready(() => {
       if (playerCounter === randomNumber) {
         wins++;
         $('#wins').text("Wins: " + wins);
-        // alert("Yessss! You Won!");
+        alert("Yessss! You Won!");
         reset();
       }
       else if(playerCounter > randomNumber) {
         losses++; //incrementally increase losses
         $('#losses').text("Losses: " + losses);
-        // alert("Be Brave! Try Again!");
+        alert("Be Brave! Try Again!");
         reset();
       }
     })
@@ -103,13 +103,13 @@ $(document).ready(() => {
       if (playerCounter === randomNumber) {
       wins++;
       $('#wins').text("Wins: " + wins);
-      // alert("Yessss! You Won!");
+      alert("Yessss! You Won!");
       reset();
       }
       else if(playerCounter > randomNumber) {
       losses++;
       $('#losses').text("Losses: " + losses);
-      // alert("Be Brave! Try Again!"); 
+      alert("Be Brave! Try Again!"); 
       reset();
       }
     })
@@ -122,13 +122,13 @@ $(document).ready(() => {
           if (playerCounter === randomNumber) {
             wins++; //incrementally increase wins
             $('#wins').text("Wins: " + wins);
-            // alert("Yessss! You Won!");
+            alert("Yessss! You Won!");
             reset();
           }
           else if(playerCounter > randomNumber) {
             losses++; //incrementally increase losses
             $('#losses').text("Losses: " + losses);
-            // alert("Be Brave! Try Again!");
+            alert("Be Brave! Try Again!");
             reset();
           }
         })
